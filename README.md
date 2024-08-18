@@ -22,8 +22,15 @@ create_ticket(project_id, form_id, layer_id): Creates a ticket in the specified 
 The script includes error handling for HTTP errors, request exceptions, and JSON decoding errors.
 It prints detailed error messages to help diagnose issues with API requests.
 
-# challanges
-1. I faced aproblem with the authorization and actually couldnot reach any Api
-2. I did two scripts one for manual testing by adding a fuction that gets project_id and then added another script for webhook testing.
-3. Regarding webhook testing my approcah was to use ngrok to expose your local server to the internet, providing a public URL that PlanRadar can send webhook requests to then Configure the Webhook on PlanRadar
-Log in to PlanRadar and go to Settings → Account → Webhooks, Create a new webhook and set the target URL to the ngrok public URL obtained earlier. but i faces aproblem is expossing the url to br public 
+# Challenges
+I encountered a problem with authorization and was unable to successfully access the API. As a result, I developed two scripts:
+
+Manual Testing Script: This script includes a function to manually retrieve the project_id.
+Webhook Testing Script: This script was intended to test webhooks by using ngrok to expose the local server to the internet, providing a public URL that PlanRadar could send webhook requests to.
+# Webhook Testing Approach
+Using ngrok: I used ngrok to expose my local server to the internet, allowing it to receive webhook requests from PlanRadar.
+Configuring the Webhook on PlanRadar: I attempted to configure a webhook in PlanRadar by navigating to Settings → Account → Webhooks and creating a new webhook with the target URL set to the ngrok public URL.
+Unfortunately, I encountered issues with exposing the URL to be public, which hindered the webhook testing process.
+
+# Conclusion
+This script lays the groundwork for integrating with the PlanRadar API, but further work is required to resolve authorization issues and successfully test the webhook functionality.
