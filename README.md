@@ -14,10 +14,10 @@ Replace script_name.py with the name of the script file.
 
 # Functions:
 
-create_project(): Simulates project creation. Modify this function to integrate with actual project creation if needed.
-create_form(project_id): Creates a form in the specified project.
-create_layer(project_id): Adds an empty layer to the specified project.
-create_ticket(project_id, form_id, layer_id): Creates a ticket in the specified project using the given form and layer IDs.
+- create_project(): Simulates project creation. Modify this function to integrate with actual project creation if needed.
+- create_form(project_id): Creates a form in the specified project.
+- create_layer(project_id): Adds an empty layer to the specified project.
+- create_ticket(project_id, form_id, layer_id): Creates a ticket in the specified project using the given form and layer IDs.
 # Error Handling
 The script includes error handling for HTTP errors, request exceptions, and JSON decoding errors.
 It prints detailed error messages to help diagnose issues with API requests.
