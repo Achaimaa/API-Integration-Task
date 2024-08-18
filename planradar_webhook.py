@@ -3,6 +3,7 @@ import json
 import logging
 from flask import Flask, request, jsonify
 
+app = Flask(__name__)
 logging.basicConfig(level=logging.DEBUG)
 # Configuration
 API_TOKEN = '7c7d162ef7700753d61334fe91d36268694dc6da1cb770a001d24af1f08483ed7249fac66bdd338af756ec7d9349ab70e06cb57b0108866d9394657b7bd303211cf5e87d2f94dd3fa199c4981ab98af6'
@@ -77,11 +78,33 @@ def create_form(project_id):
 def create_layer(project_id):
     url = f'{BASE_URL}/api/v1/{CUSTOMER_ID}/projects/{project_id}/components'
     data = {
-        "data": {
-            "attributes": {
-                "name": "Empty Layer"
+        "data": [
+            {
+                "attributes": {
+                    "file": {
+                        "link": "https://example.com/sample.pdf",
+                        "name": "sample.pdf",
+                        "type": "application/pdf"
+                    },
+                    "file-name": "sample.pdf",
+                    "file-content-type": "application/pdf",
+                    "is-base64": False,
+                    "layers": [
+                        {
+                            "page": 1,
+                            "name": "Layer 1",
+                            "rotation": 0,
+                            "parent-id": "parent-layer-id",
+                            "order": 1,
+                            "reposition-tickets": True,
+                            "component-id": "component-id",
+                            "model-id": "model-id",
+                            "model-title": "Model Title"
+                        }
+                    ]
+                }
             }
-        }
+        ]
     }
 
     try:
