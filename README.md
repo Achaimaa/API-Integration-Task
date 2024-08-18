@@ -2,14 +2,12 @@
 # Overview
 This script automates the process of creating forms, layers, and tickets in PlanRadar. It uses the PlanRadar API to perform these tasks. The script assumes that you have access to a PlanRadar account and have created necessary API tokens and configurations.
 # Prerequisites
-Python 3.x: Ensure Python 3.x is installed on your machine.
-Requests Library: Install the requests library if it's not already installed. You can install it using pip:
+- Python 3.x: Ensure Python 3.x is installed on your machine.
+- Requests Library: Install the requests library if it's not already installed. You can install it using pip:
 pip install requests
 # Usage
-Script Execution:
-
-Run the script using Python:
-python script_name.py
+- Run the script using Python:
+- python script_name.py
 Replace script_name.py with the name of the script file.
 
 # Functions:
@@ -25,8 +23,8 @@ It prints detailed error messages to help diagnose issues with API requests.
 # Challenges
 I encountered an authorization issue where the API refused to grant access even with the correct token, preventing successful API calls. As a result, I developed two separate scripts:
 
-Manual Testing Script: Includes a function to manually retrieve the project_id.
-Webhook Testing Script: Designed to test webhooks using ngrok to expose the local server to the internet, providing a public URL that PlanRadar can use to send webhook requests.
+- Manual Testing Script: Includes a function to manually retrieve the project_id.
+- Webhook Testing Script: Designed to test webhooks using ngrok to expose the local server to the internet, providing a public URL that PlanRadar can use to send webhook requests.
 # Webhook Testing Approach
 Using ngrok: I used ngrok to expose my local server to the internet, allowing it to receive webhook requests from PlanRadar.
 Configuring the Webhook on PlanRadar: I attempted to configure a webhook in PlanRadar by navigating to Settings → Account → Webhooks and creating a new webhook with the target URL set to the ngrok public URL.
