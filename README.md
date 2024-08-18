@@ -12,7 +12,7 @@ Replace script_name.py with the name of the script file.
 
 # Functions:
 
-- create_project(): Simulates project creation. Modify this function to integrate with actual project creation if needed.
+- create_project(): Simulates project creation. 
 - create_form(project_id): Creates a form in the specified project.
 - create_layer(project_id): Adds an empty layer to the specified project.
 - create_ticket(project_id, form_id, layer_id): Creates a ticket in the specified project using the given form and layer IDs.
