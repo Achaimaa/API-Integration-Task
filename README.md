@@ -23,14 +23,14 @@ The script includes error handling for HTTP errors, request exceptions, and JSON
 It prints detailed error messages to help diagnose issues with API requests.
 
 # Challenges
-I encountered a problem with authorization and was unable to successfully access the API. As a result, I developed two scripts:
+I encountered a problem with authorization it refused to grant the access even with the token and was unable to successfully access the API. As a result, I developed two scripts:
 
-Manual Testing Script: This script includes a function to manually retrieve the project_id.
-Webhook Testing Script: This script was intended to test webhooks by using ngrok to expose the local server to the internet, providing a public URL that PlanRadar could send webhook requests to.
+Manual Testing Script: Includes a function to manually retrieve the project_id.
+Webhook Testing Script: Intended to test webhooks by using ngrok to expose the local server to the internet, providing a public URL that PlanRadar can use to send webhook requests.
 # Webhook Testing Approach
 Using ngrok: I used ngrok to expose my local server to the internet, allowing it to receive webhook requests from PlanRadar.
 Configuring the Webhook on PlanRadar: I attempted to configure a webhook in PlanRadar by navigating to Settings → Account → Webhooks and creating a new webhook with the target URL set to the ngrok public URL.
-Unfortunately, I encountered issues with exposing the URL to be public, which hindered the webhook testing process.
+Unfortunately, I encountered issues with exposing the URL publicly, which hindered the webhook testing process.
 
 # Conclusion
 This script lays the groundwork for integrating with the PlanRadar API, but further work is required to resolve authorization issues and successfully test the webhook functionality.
