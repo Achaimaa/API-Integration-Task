@@ -81,12 +81,34 @@ def create_form(project_id):
 
 def create_layer(project_id):
     url = f'{BASE_URL}/api/v1/{CUSTOMER_ID}/projects/{project_id}/components'
-    data = {
-        "data": {
-            "attributes": {
-                "name": "Empty Layer"
+     data = {
+        "data": [
+            {
+                "attributes": {
+                    "file": {
+                        "link": "https://example.com/sample.pdf",
+                        "name": "sample.pdf",
+                        "type": "application/pdf"
+                    },
+                    "file-name": "sample.pdf",
+                    "file-content-type": "application/pdf",
+                    "is-base64": False,
+                    "layers": [
+                        {
+                            "page": 1,
+                            "name": "Layer 1",
+                            "rotation": 0,
+                            "parent-id": "parent-layer-id",
+                            "order": 1,
+                            "reposition-tickets": True,
+                            "component-id": "component-id",
+                            "model-id": "model-id",
+                            "model-title": "Model Title"
+                        }
+                    ]
+                }
             }
-        }
+        ]
     }
 
     try:
