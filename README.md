@@ -23,7 +23,7 @@ The script includes error handling for HTTP errors, request exceptions, and JSON
 It prints detailed error messages to help diagnose issues with API requests.
 
 # Challenges
-I encountered a problem with authorization it refused to grant the access even with the token and was unable to successfully access the API. As a result, I developed two scripts:
+I encountered a problem with authorization; the API refused to grant access even with the correct token, preventing successful access to the API. As a result, I developed two scripts:
 
 Manual Testing Script: Includes a function to manually retrieve the project_id.
 Webhook Testing Script: Intended to test webhooks by using ngrok to expose the local server to the internet, providing a public URL that PlanRadar can use to send webhook requests.
