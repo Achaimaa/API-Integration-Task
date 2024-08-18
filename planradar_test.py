@@ -81,7 +81,7 @@ def create_form(project_id):
 
 def create_layer(project_id):
     url = f'{BASE_URL}/api/v1/{CUSTOMER_ID}/projects/{project_id}/components'
-     data = {
+    data = {
         "data": [
             {
                 "attributes": {
